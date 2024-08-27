@@ -79,7 +79,6 @@ public class TP3 {
                 }
             }
         });
-        
         //configuracion frame
         frame.setLocationRelativeTo(null); //centrar frame
         frame.setVisible(true);

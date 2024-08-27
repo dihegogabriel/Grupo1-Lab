@@ -79,7 +79,12 @@ public class TP3 {
                 }
             }
         });
+<<<<<<< Updated upstream
         //configuracion frame
+=======
+        
+        //configuracion frame
+>>>>>>> Stashed changes
         frame.setLocationRelativeTo(null); //centrar frame
         frame.setVisible(true);
     }

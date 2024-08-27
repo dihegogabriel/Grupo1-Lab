@@ -2,9 +2,12 @@ package tp3;
 
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
@@ -37,10 +40,48 @@ public class TP3 {
         panel.add(registerButton);
         
         //Panel para botones de contrasenia
-        JPanel visibilityJPanel = new JPanel();
-        JButton hideButton = new JButton();
-        JButton showButton = new JButton();
+        JPanel visibilityPanel = new JPanel();
+        JButton hideButton = new JButton("Ocultar");
+        JButton showButton = new JButton("Ver");
         visibilityPanel.add(hideButton);
-        visibilityPanel.add();
+        visibilityPanel.add(showButton);
+        
+        //Añadir al JFrame
+        frame.add(panel, BorderLayout.CENTER);
+        frame.add(visibilityPanel, BorderLayout.SOUTH);
+        
+        //Accion ocultar
+        hideButton.addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e){
+                passwordField.setEchoChar('*');
+            }
+        });
+        
+        //Accion mostrar
+        showButton.addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e){
+                passwordField.setEchoChar((char) 0);
+            }
+        });
+        
+        //Accion registrar
+        registerButton.addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e){
+                String email = emailField.getText();
+                String password = new String(passwordField.getPassword());
+                if(email.equals("alumno@ulp.edu.ar") && password.equals("12345678")){
+                    JOptionPane.showMessageDialog(frame, "Bienvenido!");
+                }else{
+                    JOptionPane.showMessageDialog(frame, "Usuario y/o contraseña incorrectos");
+                }
+            }
+        });
+        
+        //configuracion frame
+        frame.setLocationRelativeTo(null); //centrar frame
+        frame.setVisible(true);
     }
 }

@@ -15,6 +15,8 @@ public class NewJFrame extends javax.swing.JFrame {
     /**
      * Creates new form NewJFrame
      */
+    int f;
+    int resultado;
     public NewJFrame() {
         initComponents();
     }
@@ -156,13 +158,13 @@ public class NewJFrame extends javax.swing.JFrame {
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
         // TODO add your handling code here:
-        int F = Integer.parseInt(enterNum.getText());
-        txtResult.setText(Integer.toString(F * 9/5 + 32));
     }//GEN-LAST:event_jButton1MouseClicked
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        JOptionPane.showMessageDialog(null, "La temperatura en grados Farenheit es: " + enterNum);
+        f = Integer.parseInt(enterNum.getText());
+        resultado = (f * 9/5 + 32);
+        JOptionPane.showMessageDialog(null, "La temperatura en grados Farenheit es: " + resultado);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

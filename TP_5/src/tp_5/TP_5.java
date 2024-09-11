@@ -17,8 +17,8 @@ public class TP_5 {
         directorio.agregarContacto(8762459234L, contacto4);
         directorio.agregarContacto(3785386733L, contacto5);
         
-        System.out.println("Contacto con el telefono: 5473849244 " + directorio.buscarContacto(5473849244L));
-        System.out.println("Telefonos con apellido Garcia: " + directorio.buscarTelefono("Garcia"));
+        System.out.println("Contacto con el numero de telefono: 5473849244 " + directorio.buscarContacto(5473849244L));
+        System.out.println("Telefonos con el apellido Garcia: " + directorio.buscarTelefono("Garcia"));
         System.out.println("Contactos de Los Angeles: " + directorio.buscarContactos("Los Angeles"));
         directorio.borrarContacto(5473849244L);
         System.out.println("Se elimino el contacto con el telefono 5473849244: " + directorio.buscarContacto(5473849244L));

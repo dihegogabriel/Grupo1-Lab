@@ -2,14 +2,14 @@ package tp6_2;
 
 import java.util.Objects;
 
-public class Producto implements Comparable<Producto> {
+public class Producto implements Comparable<Producto>{
     private int codigo;
     private String descripcion;
     private double precio;
     private int stock;
     private String rubro;
 
-    public Producto(int codigo, String descripcion, double precio, int stock, String rubro) {
+    public Producto(int codigo, String descripcion, double precio, int stock, String rubro){
         this.codigo = codigo;
         this.descripcion = descripcion;
         this.precio = precio;
@@ -17,60 +17,60 @@ public class Producto implements Comparable<Producto> {
         this.rubro = rubro;
     }
 
-    public int getCodigo() {
+    public int getCodigo(){
         return codigo;
     }
 
-    public void setCodigo(int codigo) {
+    public void setCodigo(int codigo){
         this.codigo = codigo;
     }
 
-    public String getDescripcion() {
+    public String getDescripcion(){
         return descripcion;
     }
 
-    public void setDescripcion(String descripcion) {
+    public void setDescripcion(String descripcion){
         this.descripcion = descripcion;
     }
 
-    public double getPrecio() {
+    public double getPrecio(){
         return precio;
     }
 
-    public void setPrecio(double precio) {
+    public void setPrecio(double precio){
         this.precio = precio;
     }
 
-    public int getStock() {
+    public int getStock(){
         return stock;
     }
 
-    public void setStock(int stock) {
+    public void setStock(int stock){
         this.stock = stock;
     }
 
-    public String getRubro() {
+    public String getRubro(){
         return rubro;
     }
 
-    public void setRubro(String rubro) {
+    public void setRubro(String rubro){
         this.rubro = rubro;
     }
 
     @Override
-    public int compareTo(Producto p) {
+    public int compareTo(Producto p){
         return Integer.compare(this.codigo, p.getCodigo());
     }
 
     @Override
-    public int hashCode() {
+    public int hashCode(){
         return Objects.hash(codigo);
     }
 
     @Override
-    public boolean equals(Object obj) {
-        if (this == obj) return true;
-        if (obj == null || getClass() != obj.getClass()) return false;
+    public boolean equals(Object obj){
+        if(this == obj) return true;
+        if(obj == null || getClass() != obj.getClass()) return false;
         Producto producto = (Producto) obj;
         return codigo == producto.codigo;
     }

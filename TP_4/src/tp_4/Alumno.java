@@ -40,15 +40,31 @@ public class Alumno {
     }
     
     public void agregarMateria(Materia m){
-        Iterator i = listaMaterias.iterator();
+        Iterator<Materia> i = listaMaterias.iterator();
         boolean rep = false;
-        while (i.hasNext()) {            
-            if(i.next() == m){
-                rep = true;
+        
+            while (i.hasNext()) {
+                Materia mat = i.next();
+                if (mat.equals(m)) {
+                    rep = true;
+                    System.out.println("Ya se ha agregado esta materia (" + m.getNombre() + " ) ");
+                    break;
+                }
             }
-        }
-        if(rep){
-            listaMaterias.add(m);
+            if(!rep){
+                listaMaterias.add(m);
+                System.out.println("Se ha agregado la materia " + m.getNombre());
+            }
+    }
+    public void listarMaterias(){
+        if (listaMaterias.isEmpty()){
+            System.out.println("Este alumno no se ha matriculado en ninguna materia");            
+        } else {
+            System.out.println("Materias inscritas del alumno ("+nombre+" "+apellido+ ")");
+            for (Materia mat : listaMaterias){
+                System.out.println(mat.getNombre());
+            }
         }
     }
 }
+

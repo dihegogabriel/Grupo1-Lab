@@ -17,5 +17,9 @@ public class Colegio {
         alumno2.agregarMateria(materia2);
         alumno2.agregarMateria(materia1);
         alumno2.agregarMateria(materia1);
+        // listo las materias de cada alumno
+        alumno1.listarMaterias();
+        alumno2.listarMaterias();
     }
+    
 }

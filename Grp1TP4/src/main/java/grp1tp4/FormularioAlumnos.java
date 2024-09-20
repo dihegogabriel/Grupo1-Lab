@@ -210,16 +210,27 @@ public class FormularioAlumnos extends javax.swing.JInternalFrame {
     private void jbGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbGuardarActionPerformed
         // TODO add your handling code here:
         try{
-        int matricula= Integer.parseInt(jtLegajo.getText());  //Paso 5: En evento click_Cargar creo alumno ingresado y lo envio a la tabla
-        if(jtApellido.getText().isEmpty()||jtNombre.getText().isEmpty()){   //Si apellido y nombre estan vacios mensaje
+        int matricula= Integer.parseInt(jtLegajo.getText());  
+        if(jtApellido.getText().isEmpty()||jtNombre.getText().isEmpty()){  
             JOptionPane.showMessageDialog(this,"Complete todos los valores para poder guardar");
             return;
         }
         
         String apellido= jtApellido.getText();
         String nombre= jtNombre.getText();
-        
         Alumno alu= new Alumno(matricula, apellido, nombre); 
+        
+        for (Alumno alumno : listaAlumnos) {
+            if(alumno.getApellido().equalsIgnoreCase(alu.getApellido()) && alumno.getNombre().equals(alu.getNombre())){
+                JOptionPane.showMessageDialog(this,"Este alumno ya ha sido guardado anteriormente");
+                return;
+            }
+            if(alumno.getLegajo()==alu.getLegajo()){
+                JOptionPane.showMessageDialog(this,"Esta matricula ya existe");
+                return;
+            }
+        }
+        
         listaAlumnos.add(alu);
         cargarDatos(alu);
         

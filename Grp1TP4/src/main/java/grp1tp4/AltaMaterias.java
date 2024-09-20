@@ -208,9 +208,19 @@ public class AltaMaterias extends javax.swing.JInternalFrame {
         }
         int codigo= Integer.parseInt(jtCodigo.getText());
         String nombre= jtNombre.getText();
-        int anio= Integer.parseInt(jtAnio.getText());
-        
+        int anio= Integer.parseInt(jtAnio.getText());        
         Materia mat= new Materia(codigo, nombre, anio);
+        
+        for (Materia materia : listaMaterias) {
+            if(materia.getNombre().equalsIgnoreCase(mat.getNombre()) && materia.getAnio()==mat.getAnio()){
+                JOptionPane.showMessageDialog(this,"Esta materia ya ha sido guardado anteriormente");
+                return;
+            }
+            if(materia.getIdMateria()==mat.getIdMateria()){
+                JOptionPane.showMessageDialog(this,"Este codigo ya existe");
+                return;
+            }
+        }
         listaMaterias.add(mat);
         cargarDatos(mat);
  

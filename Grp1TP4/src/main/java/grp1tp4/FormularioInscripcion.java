@@ -187,7 +187,6 @@ public class FormularioInscripcion extends javax.swing.JInternalFrame {
 
         for (Inscripcion inscripcion : listaInscripciones) {
             if(inscripcion.getAlumno().equalsIgnoreCase(incN.getAlumno()) && inscripcion.getMateria().equals(incN.getMateria())){
-                System.out.println("matN="+matN+" aluN="+aluN+" mat="+inscripcion.getCodigoMat()+" alu="+inscripcion.getCodigoAlu());
                 JOptionPane.showMessageDialog(this,"Esta inscripciòn ya ha sido realizada anteriormente");
                 return;
             }

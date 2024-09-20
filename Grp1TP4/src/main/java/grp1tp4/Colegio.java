@@ -1,4 +1,17 @@
-/*En el método main de una clase de nombre Colegio:
+/*
+ Un Alumno tiene un nro de legajo, un apellido, un nombre y una lista HashSet de 
+materias en las que está inscripto; para ello tiene un método agregarMateria que 
+permite inscribir al Alumno en una materia determinada (implementar de manera tal 
+que no deje inscribir un alumno en dos materias iguales.) y otro método cantidadMaterias 
+que devuelve la cantidad de materias a las que está inscripto el alumno.
+
+La Materia tiene un idMateria, un nombre de la materia y año al que pertenece, 
+tiene además un constructor que inicializa sus propiedades y métodos get y set 
+para cada uno de sus atributos.
+
+Se pide:
+
+En el método main de una clase de nombre Colegio:
 
 1. Crear las materias:
 a. Ingles I de primer año.

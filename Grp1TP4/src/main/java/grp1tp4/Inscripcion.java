@@ -9,10 +9,7 @@ import static grp1tp4.Colegio.listaMaterias;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
-/**
- *
- * @author grupo1-l@boratorio_TUDS */
-public class Inscripcion {
+public class Inscripcion{
     private LocalDate fecha;
     private int codigoMat;
     private int codigoAlu;
@@ -42,7 +39,6 @@ public class Inscripcion {
         return sel;
     }
 
-
     public String getAlumno() {
         sel= "";
         for (Alumno alumno : listaAlumnos) {
@@ -50,8 +46,7 @@ public class Inscripcion {
                 sel= alumno.toString();
             }           
         }
-        return sel;        
-
+        return sel;
     }
 
     public int getCodigoMat() {
@@ -70,10 +65,8 @@ public class Inscripcion {
         this.codigoAlu = codigoAlu;
     }
 
-
     @Override
     public String toString() {
         return "Inscripcion{" + "fecha=" + fecha.format(DateTimeFormatter.ofPattern("dd/MM/yyyy")) + ", codigoMat=" + codigoMat + ", codigoAlu=" + codigoAlu + '}';
     }
-
 }

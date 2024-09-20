@@ -211,7 +211,7 @@ public class AltaMaterias extends javax.swing.JInternalFrame {
         int anio= Integer.parseInt(jtAnio.getText());
         
         Materia mat= new Materia(codigo, nombre, anio);
-        
+        listaMaterias.add(mat);
         cargarDatos(mat);
  
         }catch(NumberFormatException nf){

@@ -220,6 +220,7 @@ public class FormularioAlumnos extends javax.swing.JInternalFrame {
         String nombre= jtNombre.getText();
         
         Alumno alu= new Alumno(matricula, apellido, nombre); 
+        listaAlumnos.add(alu);
         cargarDatos(alu);
         
         }catch(NumberFormatException nf){
@@ -252,6 +253,7 @@ public class FormularioAlumnos extends javax.swing.JInternalFrame {
 
     private void cargarDatos(Alumno alumno){     
         modelo.addRow(new Object[]{alumno.getLegajo(), alumno.getApellido(), alumno.getNombre()}); 
+
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;

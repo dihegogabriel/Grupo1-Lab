@@ -77,6 +77,11 @@ public class AltaMaterias extends javax.swing.JInternalFrame {
         });
 
         jbSalir.setText("Salir");
+        jbSalir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbSalirActionPerformed(evt);
+            }
+        });
 
         jPanel1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
@@ -243,6 +248,14 @@ public class AltaMaterias extends javax.swing.JInternalFrame {
     private void jtAnioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtAnioActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jtAnioActionPerformed
+
+    private void jbSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSalirActionPerformed
+        // TODO add your handling code here
+        int resp= JOptionPane.showConfirmDialog(this, "¡Esta seguro de salir de esta ventana?","Advertrencia",JOptionPane.YES_NO_OPTION);
+        if (resp==JOptionPane.YES_OPTION){
+            System.exit(0);
+        }      
+    }//GEN-LAST:event_jbSalirActionPerformed
     private void armarCabecera(){ 
     
         modelo.addColumn("Código");

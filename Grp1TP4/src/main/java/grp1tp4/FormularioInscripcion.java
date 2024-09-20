@@ -75,6 +75,11 @@ public class FormularioInscripcion extends javax.swing.JInternalFrame {
         });
 
         jbSalir.setText("Salir");
+        jbSalir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbSalirActionPerformed(evt);
+            }
+        });
 
         jPanel1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
@@ -206,6 +211,14 @@ public class FormularioInscripcion extends javax.swing.JInternalFrame {
     private void jcAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcAlumnoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jcAlumnoActionPerformed
+
+    private void jbSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSalirActionPerformed
+        // TODO add your handling code here:
+        int resp= JOptionPane.showConfirmDialog(this, "¡Esta seguro de salir de esta ventana?","Advertrencia",JOptionPane.YES_NO_OPTION);
+        if (resp==JOptionPane.YES_OPTION){
+            System.exit(0);
+        }
+    }//GEN-LAST:event_jbSalirActionPerformed
     private void armarCabecera(){ 
     
         modelo.addColumn("Fecha");

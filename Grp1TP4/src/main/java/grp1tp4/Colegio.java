@@ -65,10 +65,5 @@ public class Colegio {
 
             Principal.main(args);
             
-
-            
-            
-
-            
     }
 }

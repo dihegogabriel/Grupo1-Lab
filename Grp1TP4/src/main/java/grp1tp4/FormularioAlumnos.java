@@ -48,6 +48,9 @@ public class FormularioAlumnos extends javax.swing.JInternalFrame {
         jtNombre = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
 
+        setPreferredSize(new java.awt.Dimension(400, 400));
+        setRequestFocusEnabled(false);
+
         jtAlumnos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},

@@ -23,6 +23,7 @@ import java.util.HashSet;
 /**
  *
  * @author grupo1-l@boratorio_TUDS */
+
 public class Colegio {
             public static HashSet<Alumno> listaAlumnos= new HashSet(); ;
             public static HashSet<Materia> listaMaterias= new HashSet();
@@ -36,30 +37,19 @@ public class Colegio {
             listaMaterias.add(mat1);
             listaMaterias.add(mat2);
             listaMaterias.add(mat3);
-//            System.out.println("La lista de materias son:");
-//            for (Materia materia : listaMaterias) {
-//            System.out.println(materia);           
-//            }
             
             Alumno alu1= new Alumno(1001,"López", "Martín");
             Alumno alu2= new Alumno(1002,"Martínez", "Brenda");
             listaAlumnos.add(alu1);
             listaAlumnos.add(alu2);
-//            System.out.println("La lista de alumnos son:");
-//            for (Alumno alumno : listaAlumnos) {
-//            System.out.println(alumno);           
-//            }            
-            
+                
             Inscripcion inc1= new Inscripcion(LocalDate.now(),154,1001);
             Inscripcion inc2= new Inscripcion(LocalDate.now(),155,1001);
             Inscripcion inc3= new Inscripcion(LocalDate.now(),156,1001);
             listaInscripciones.add(inc1);
             listaInscripciones.add(inc2);
             listaInscripciones.add(inc3);
-//            System.out.println("La lista de inscriptos son:");
-//            for (Inscripcion inscripcion : listaInscripciones) {
-//            System.out.println(inscripcion); 
-//            }
+
             Principal.main(args);
             
 

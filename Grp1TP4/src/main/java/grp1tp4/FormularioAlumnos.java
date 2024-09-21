@@ -62,6 +62,7 @@ public class FormularioAlumnos extends javax.swing.JInternalFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        jtAlumnos.setEnabled(false);
         jScrollPane1.setViewportView(jtAlumnos);
 
         jbGuardar.setText("Guardar");

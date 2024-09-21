@@ -252,7 +252,7 @@ public class AltaMaterias extends javax.swing.JInternalFrame {
 
     private void jbSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSalirActionPerformed
         // TODO add your handling code here
-        int resp= JOptionPane.showConfirmDialog(this, "¡Esta seguro de salir de esta ventana?","Advertrencia",JOptionPane.YES_NO_OPTION);
+        int resp= JOptionPane.showConfirmDialog(this, "¿Esta seguro de salir de la aplicacion?","Advertrencia",JOptionPane.YES_NO_OPTION);
         if (resp==JOptionPane.YES_OPTION){
             System.exit(0);
         }      

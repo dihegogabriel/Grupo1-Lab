@@ -3,17 +3,13 @@ package grp1tp4;
 import java.util.HashSet;
 import java.util.Iterator;
 
-/**
- *
- * @author grupo1-l@boratorio_TUDS */
-
-public class Alumno {
+public class Alumno{
     private int legajo;
     private String apellido;
     private String nombre;
     private HashSet <Materia> listaMaterias = new HashSet();
     
-    public Alumno(int legajo, String apellido, String nombre) {
+    public Alumno(int legajo, String apellido, String nombre){
         this.legajo = legajo;
         this.apellido = apellido;
         this.nombre = nombre;
@@ -54,7 +50,7 @@ public class Alumno {
     }
 
     @Override
-    public String toString() {
+    public String toString(){
         return nombre + " " + apellido;
     }
     

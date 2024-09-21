@@ -2,10 +2,6 @@ package grp1tp4;
 
 import static grp1tp4.Colegio.listaMaterias;
 
-/**
- *
- * @author grupo1-l@boratorio_TUDS */
-
 public class Materia {
     
     private int idMateria;
@@ -56,6 +52,4 @@ public class Materia {
     public String toString() {
         return  nombre + " (Año: " + anio+ ")";
     }
-    
-    
 }

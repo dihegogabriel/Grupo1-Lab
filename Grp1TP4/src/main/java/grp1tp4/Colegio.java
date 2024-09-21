@@ -33,16 +33,12 @@ package grp1tp4;
 import java.time.LocalDate;
 import java.util.HashSet;
 
-/**
- *
- * @author grupo1-l@boratorio_TUDS */
-
-public class Colegio {
+public class Colegio{
             public static HashSet<Alumno> listaAlumnos= new HashSet(); ;
             public static HashSet<Materia> listaMaterias= new HashSet();
             public static HashSet<Inscripcion> listaInscripciones= new HashSet();
         
-            public static void main(String[] args) {
+            public static void main(String[] args){
             
             Materia mat1= new Materia(154, "Ingles 1", 1);
             Materia mat2= new Materia(155, "Matemática", 1);
@@ -64,6 +60,5 @@ public class Colegio {
             listaInscripciones.add(inc3);
 
             Principal.main(args);
-            
     }
 }

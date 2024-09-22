@@ -1,14 +1,13 @@
 package tp_5;
 
-
-public class Contacto {
+public class Contacto{
     private String dni;
     private String nombre;
     private String apellido;
     private String direccion;
     private String ciudad;
 
-    public Contacto(String dni, String nombre, String apellido, String direccion, String ciudad){
+     Contacto(String dni, String nombre, String apellido, String ciudad, String direccion, Long telefono){
         this.dni = dni;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -16,43 +15,43 @@ public class Contacto {
         this.ciudad = ciudad;
     }
 
-    public String getDni() {
+    public String getDni(){
         return dni;
     }
 
-    public void setDni(String dni) {
+    public void setDni(String dni){
         this.dni = dni;
     }
 
-    public String getNombre() {
+    public String getNombre(){
         return nombre;
     }
 
-    public void setNombre(String nombre) {
+    public void setNombre(String nombre){
         this.nombre = nombre;
     }
 
-    public String getApellido() {
+    public String getApellido(){
         return apellido;
     }
 
-    public void setApellido(String apellido) {
+    public void setApellido(String apellido){
         this.apellido = apellido;
     }
 
-    public String getDireccion() {
+    public String getDireccion(){
         return direccion;
     }
 
-    public void setDireccion(String direccion) {
+    public void setDireccion(String direccion){
         this.direccion = direccion;
     }
 
-    public String getCiudad() {
+    public String getCiudad(){
         return ciudad;
     }
 
-    public void setCiudad(String ciudad) {
+    public void setCiudad(String ciudad){
         this.ciudad = ciudad;
     }
     

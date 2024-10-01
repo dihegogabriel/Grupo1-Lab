@@ -49,6 +49,8 @@ public class FormularioInscripcion extends javax.swing.JInternalFrame {
         jcMateria = new javax.swing.JComboBox<>();
         jcAlumno = new javax.swing.JComboBox<>();
 
+        setClosable(true);
+
         jtInscripciones.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},

@@ -45,6 +45,8 @@ public class AltaMaterias extends javax.swing.JInternalFrame {
         jtNombre = new javax.swing.JTextField();
         jtAnio = new javax.swing.JTextField();
 
+        setClosable(true);
+
         jLabel1.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Formulario de Materias");

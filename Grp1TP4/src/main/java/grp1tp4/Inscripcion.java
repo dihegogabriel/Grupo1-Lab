@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package grp1tp4;
 
 import static grp1tp4.Colegio.listaAlumnos;
@@ -29,9 +25,9 @@ public class Inscripcion{
         this.fecha = fecha;
     }
 
-    public String getMateria() {
+    public String getMateria(){
         sel= "";
-        for (Materia materia : listaMaterias) {
+        for(Materia materia : listaMaterias){
             if(materia.getIdMateria() == codigoMat){
                 sel= materia.getNombre();
             }           
@@ -39,9 +35,9 @@ public class Inscripcion{
         return sel;
     }
 
-    public String getAlumno() {
+    public String getAlumno(){
         sel= "";
-        for (Alumno alumno : listaAlumnos) {
+        for(Alumno alumno : listaAlumnos){
             if(alumno.getLegajo() == codigoAlu){
                 sel= alumno.toString();
             }           

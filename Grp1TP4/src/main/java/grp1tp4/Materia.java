@@ -2,13 +2,13 @@ package grp1tp4;
 
 import static grp1tp4.Colegio.listaMaterias;
 
-public class Materia {
+public class Materia{
     
     private int idMateria;
     private String nombre;
     private int anio;
 
-    public Materia(int idMateria, String nombre, int anio) {
+    public Materia(int idMateria, String nombre, int anio){
         this.idMateria = idMateria;
         this.nombre = nombre;
         this.anio = anio;

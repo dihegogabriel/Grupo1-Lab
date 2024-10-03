@@ -40,7 +40,7 @@ public class Alumno{
     }
     
     public boolean agregarMateria(Materia m){
-        for (Materia materia : listaMaterias) {
+        for(Materia materia : listaMaterias){
             if(materia.equals(m)){
                 listaMaterias.add(m);
                 return true;
